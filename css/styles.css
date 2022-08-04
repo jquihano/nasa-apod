@@ -37,7 +37,7 @@ img {
     width: 50%;
     height: 40%;
     padding: 2em;
-    margin-left: 6em;
+    margin-left: 8em;
 }
 
 h1 {
@@ -49,8 +49,12 @@ h1, h2 {
 }
 
 .get-data {
-    margin-left: 13em;
+    margin-left: 15em;
     padding-top: 2em;
+}
+
+h2 {
+    padding-top: 1em;
 }
 
 h4 {
