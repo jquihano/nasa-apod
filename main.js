@@ -11,8 +11,9 @@ function getFetch(){
     .then(res => res.json())
     .then(data => {
         console.log(data)
+        document.querySelector('.date').innerText = data.date
         document.querySelector('img').src = data.hdurl
-        document.querySelector('h2').innerText = data.title
+        document.querySelector('.title').innerText = data.title
         document.querySelector('h4').innerText = data.explanation
     })
     .catch(error => {
@@ -24,9 +25,10 @@ window.onload = () => {
     fetch(url).then(r=>r.json()).then(data => 
     {
       console.log(data)
+      document.querySelector('.date').innerText = data.date
       document.querySelector('img').src = data.hdurl
-        document.querySelector('h2').innerText = data.title
-        document.querySelector('h4').innerText = data.explanation
+      document.querySelector('.title').innerText = data.title
+      document.querySelector('h4').innerText = data.explanation
       //use data
      });
   };
