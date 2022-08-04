@@ -1,3 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
 html {
     font-family: 'Exo', sans-serif;
 }
+
+body {
+    background: url("https://apod.nasa.gov/apod/image/2207/C2017k2cumuloM10v4_1024.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    height: 100vh;
+    padding-top: 1em;
+}
+
+.modal {
+    color: whitesmoke;
+    margin:  0 20em ;
+    padding: 2em 4em;
+    background: rgba(186, 211, 200, 0.22);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.9px);
+    -webkit-backdrop-filter: blur(2.9px);
+}
+
+
+img {
+    width: 50%;
+    height: 40%;
+    padding: 2em;
+    margin-left: 6em;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.get-data {
+    margin-left: 13em;
+    padding-top: 2em;
+}
+
+h4 {
+    font-size: 14px;
+    color: whitesmoke;
+}
+
+.about-image {
+    line-height: 1.5em;
+    padding: 10px;
+    background: rgba(12, 11, 11, .7);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(1.8px);
+    -webkit-backdrop-filter: blur(1.8px);
+    border: 1px solid rgba(0, 0, 0, 0.09);
+}
+
