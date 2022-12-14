@@ -21,22 +21,22 @@ function getFetch(){
 })
 }
 
-window.onload = () => {
-    fetch(url).then(r=>r.json()).then(data => 
-    {
-      console.log(data)
-      document.querySelector('.date').innerText = data.date
-      document.querySelector('.nasa-image').src = data.hdurl
-      document.querySelector('.title').innerText = data.title
-      document.querySelector('h4').innerText = data.explanation
-      //use data
-     });
-  };
+// window.onload = () => {
+//     fetch(url).then(r=>r.json()).then(data => 
+//     {
+//       console.log(data)
+//       document.querySelector('.date').innerText = data.date
+//       document.querySelector('.nasa-image').src = data.hdurl
+//       document.querySelector('.title').innerText = data.title
+//       document.querySelector('h4').innerText = data.explanation
+//       //use data
+//      });
+//   };
 
-    document.querySelector('.date').innerText = data.date
-    document.querySelector('.nasa-image').src = data.hdurl
-    document.querySelector('.title').innerText = data.title
-    document.querySelector('h4').innerText = data.explanation
+//     document.querySelector('.date').innerText = data.date
+//     document.querySelector('.nasa-image').src = data.hdurl
+//     document.querySelector('.title').innerText = data.title
+//     document.querySelector('h4').innerText = data.explanation
 
 
   function fetchData() {
