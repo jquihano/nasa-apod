@@ -65,23 +65,30 @@ let url = `https://api.nasa.gov/planetary/apod?api_key=71LrDepajiM2fYdRzs0jbvRcs
         
         for(let i = fetchData.length -1; i > 0 ; i--){
             const newDiv = document.createElement("div")
-            let word = document.createElement('h1')
+            const picDate = document.createElement("p")
+            let title = document.createElement('h1')
             let para = document.createElement('p')
             let nasaImg = document.createElement('img')
             let detailsBtn = document.createElement('button')
 
 
             detailsBtn.innerText = 'Show details'
-            word.innerText = fetchData[i].title
+            title.innerText = fetchData[i].title
             para.innerText = fetchData[i].explanation
+            picDate.innerText = fetchData[i].date
             nasaImg.src = fetchData[i].hdurl
+
+            title.className = 'title'
             newDiv.className = 'card'
             nasaImg.className = 'nasa-image'
             para.className = 'details'
+            detailsBtn.className = 'detailBtn'
+            
             
 
             newDiv.appendChild(nasaImg)
-            newDiv.appendChild(word)
+            newDiv.appendChild(title)
+            newDiv.appendChild(picDate)
             newDiv.appendChild(detailsBtn)
             newDiv.appendChild(para)
 
