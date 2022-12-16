@@ -1,25 +1,25 @@
-document.querySelector('button').addEventListener('click', getFetch)
+// document.querySelector('button').addEventListener('click', getFetch)
 
 let url = `https://api.nasa.gov/planetary/apod?api_key=71LrDepajiM2fYdRzs0jbvRcsebUtvKkQuiW76Kz`
 
 
-function getFetch(){
-    const choice = document.querySelector('input').value
-     url = `https://api.nasa.gov/planetary/apod?api_key=71LrDepajiM2fYdRzs0jbvRcsebUtvKkQuiW76Kz&date=${choice}`
-    fetch(url)
-    //handle the response
-    .then(res => res.json())
-    .then(data => {
-        console.log(data)
-        document.querySelector('.date').innerText = data.date
-        document.querySelector('.nasa-image').src = data.hdurl
-        document.querySelector('.title').innerText = data.title
-        document.querySelector('h4').innerText = data.explanation
-    })
-    .catch(error => {
-    console.log(error)
-})
-}
+// function getFetch(){
+//     const choice = document.querySelector('input').value
+//      url = `https://api.nasa.gov/planetary/apod?api_key=71LrDepajiM2fYdRzs0jbvRcsebUtvKkQuiW76Kz&date=${choice}`
+//     fetch(url)
+//     //handle the response
+//     .then(res => res.json())
+//     .then(data => {
+//         console.log(data)
+//         document.querySelector('.date').innerText = data.date
+//         document.querySelector('.nasa-image').src = data.hdurl
+//         document.querySelector('.title').innerText = data.title
+//         document.querySelector('h4').innerText = data.explanation
+//     })
+//     .catch(error => {
+//     console.log(error)
+// })
+// }
 
 // window.onload = () => {
 //     fetch(url).then(r=>r.json()).then(data => 
@@ -72,9 +72,12 @@ function getFetch(){
             para.innerText = fetchData[i].explanation
             nasaImg.src = fetchData[i].hdurl
             newDiv.className = 'card'
+            nasaImg.className = 'nasa-image'
+            para.className = 'details'
+            
+            newDiv.appendChild(nasaImg)
             newDiv.appendChild(word)
             newDiv.appendChild(para)
-            newDiv.appendChild(nasaImg)
 
             const currentDiv = document.getElementById("div1");
             currentDiv.appendChild(newDiv)
@@ -83,3 +86,5 @@ function getFetch(){
     });
     return apiData;
   }
+
+  fetchData();
