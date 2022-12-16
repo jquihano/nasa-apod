@@ -62,21 +62,29 @@ let url = `https://api.nasa.gov/planetary/apod?api_key=71LrDepajiM2fYdRzs0jbvRcs
     )
     .then((response) => response.json())
     .then((fetchData) => {
-        
+        console.log(fetchData)
         for(let i = fetchData.length -1; i > 0 ; i--){
             const newDiv = document.createElement("div")
             const picDate = document.createElement("p")
             let title = document.createElement('h1')
             let para = document.createElement('p')
-            let nasaImg = document.createElement('img')
+            let nasaImg
             let detailsBtn = document.createElement('button')
+
+            if(fetchData[i].media_type == "video"){
+                  nasaImg = document.createElement('iframe')
+                  nasaImg.src = fetchData[i].url
+            } else {
+                nasaImg = document.createElement('img')
+                nasaImg.src = fetchData[i].hdurl
+            }
 
 
             detailsBtn.innerText = 'Show details'
             title.innerText = fetchData[i].title
             para.innerText = fetchData[i].explanation
             picDate.innerText = fetchData[i].date
-            nasaImg.src = fetchData[i].hdurl
+            
 
             title.className = 'title'
             newDiv.className = 'card'
