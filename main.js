@@ -68,6 +68,10 @@ let url = `https://api.nasa.gov/planetary/apod?api_key=71LrDepajiM2fYdRzs0jbvRcs
             let word = document.createElement('h1')
             let para = document.createElement('p')
             let nasaImg = document.createElement('img')
+            let detailsBtn = document.createElement('button')
+
+
+            detailsBtn.innerText = 'Show details'
             word.innerText = fetchData[i].title
             para.innerText = fetchData[i].explanation
             nasaImg.src = fetchData[i].hdurl
@@ -75,9 +79,21 @@ let url = `https://api.nasa.gov/planetary/apod?api_key=71LrDepajiM2fYdRzs0jbvRcs
             nasaImg.className = 'nasa-image'
             para.className = 'details'
             
+
             newDiv.appendChild(nasaImg)
             newDiv.appendChild(word)
+            newDiv.appendChild(detailsBtn)
             newDiv.appendChild(para)
+
+
+            detailsBtn.addEventListener('click', ()=> {
+                para.classList.toggle("display")
+                if(detailsBtn.innerText == 'Hide Details'){
+                    detailsBtn.innerText = 'Show Details'
+                } else {
+                    detailsBtn.innerText = 'Hide Details'
+                }           
+            })
 
             const currentDiv = document.getElementById("div1");
             currentDiv.appendChild(newDiv)
@@ -86,5 +102,6 @@ let url = `https://api.nasa.gov/planetary/apod?api_key=71LrDepajiM2fYdRzs0jbvRcs
     });
     return apiData;
   }
+
 
   fetchData();
