@@ -9,36 +9,40 @@ html {
 }
 
 body {
-    background: url("https://apod.nasa.gov/apod/image/2207/C2017k2cumuloM10v4_1024.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #242f40;
     height: 100%;
     width: 100%;
 }
 
+#logo {
+    max-width: 150px;
+}
+
 .container {
     height: 100%;
+    margin: 0 auto;
     padding-top: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal {
-    color: whitesmoke;
+    color: #f3f3f3;
     margin:  0 20em ;
     padding: 2em 4em;
-    background: rgba(186, 211, 200, 0.22);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(2.9px);
     -webkit-backdrop-filter: blur(2.9px);
+    min-width: none;
 }
 
-
-img {
-    width: 50%;
-    height: 40%;
-    padding: 2em;
-    margin-left: 8em;
+#heading {
+    color: #f6e123;
 }
+
 
 h1 {
     font-size: 40px;
@@ -59,17 +63,65 @@ h2 {
 
 h4 {
     font-size: 14px;
-    color: whitesmoke;
+    color: #f3f3f3;
 }
 
-.about-image {
+a {
+    text-decoration: none;
+    color: #f6e123;
+}
+
+.para-text {
+    color: #f3f3f3;
+}
+
+/* .about-image {
     line-height: 1.5em;
     padding: 10px;
     background: rgba(12, 11, 11, .7);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    border-color: #f3f3f3;
+    border: 5px;
     backdrop-filter: blur(1.8px);
     -webkit-backdrop-filter: blur(1.8px);
     border: 1px solid rgba(0, 0, 0, 0.09);
+} */
+
+.card {
+    line-height: 1.5em;
+    color: #f3f3f3;
+    padding: 10px;
+    background: #242f40;
+    border-radius: 16px;
+    border: 2px solid #f3f3f3;
+    margin: 2rem;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.card ::hover {
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 1);
+
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.details {
+    font-size: .9rem;
+    display: none;
+    padding: 2rem;
+}
+
+.nasa-image {
+    width: calc(460px + 2vmin);
+    height: calc(375px + 2vmin);
+    border: 3px solid #f3f3f3;
+    border-radius: 16px;
+}
